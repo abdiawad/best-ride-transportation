@@ -1292,16 +1292,16 @@ footer h5{ font-size:.82rem; letter-spacing:1.5px; text-transform:uppercase; col
             <input type="hidden" name="form-name" value="booking">
             <p style="position:absolute; left:-9999px;"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
             <div class="form-grid">
-              <div class="form-group"><label for="bFullName">Full Name *</label><input type="text" id="bFullName" required placeholder="John Smith"></div>
-              <div class="form-group"><label for="bEmail">Email *</label><input type="email" id="bEmail" required placeholder="john@example.com"></div>
-              <div class="form-group"><label for="bPhone">Phone Number *</label><input type="tel" id="bPhone" required placeholder="(615) 555-0100"></div>
-              <div class="form-group"><label for="bPassengers">Number of Passengers *</label><input type="number" id="bPassengers" min="1" max="40" required placeholder="2"></div>
-              <div class="form-group full"><label for="bPickup">Pickup Location *</label><input type="text" id="bPickup" required placeholder="e.g. BNA Airport, Terminal A"></div>
-              <div class="form-group full"><label for="bDropoff">Drop-off Location *</label><input type="text" id="bDropoff" required placeholder="e.g. Downtown Nashville Hotel"></div>
-              <div class="form-group"><label for="bDate">Pickup Date *</label><input type="date" id="bDate" required></div>
-              <div class="form-group"><label for="bTime">Pickup Time *</label><input type="time" id="bTime" required></div>
+              <div class="form-group"><label for="bFullName">Full Name *</label><input type="text" id="bFullName" name="fullName" required placeholder="John Smith"></div>
+              <div class="form-group"><label for="bEmail">Email *</label><input type="email" id="bEmail" name="email" required placeholder="john@example.com"></div>
+              <div class="form-group"><label for="bPhone">Phone Number *</label><input type="tel" id="bPhone" name="phone" required placeholder="(615) 555-0100"></div>
+              <div class="form-group"><label for="bPassengers">Number of Passengers *</label><input type="number" id="bPassengers" name="passengers" min="1" max="40" required placeholder="2"></div>
+              <div class="form-group full"><label for="bPickup">Pickup Location *</label><input type="text" id="bPickup" name="pickupLocation" required placeholder="e.g. BNA Airport, Terminal A"></div>
+              <div class="form-group full"><label for="bDropoff">Drop-off Location *</label><input type="text" id="bDropoff" name="dropoffLocation" required placeholder="e.g. Downtown Nashville Hotel"></div>
+              <div class="form-group"><label for="bDate">Pickup Date *</label><input type="date" id="bDate" name="pickupDate" required></div>
+              <div class="form-group"><label for="bTime">Pickup Time *</label><input type="time" id="bTime" name="pickupTime" required></div>
               <div class="form-group"><label for="bVehicle">Vehicle Type *</label>
-                <select id="bVehicle" required>
+                <select id="bVehicle" name="vehicleType" required>
                   <option value="">Select a vehicle</option>
                   <option>Premium Sedan</option>
                   <option>Luxury SUV</option>
@@ -1311,8 +1311,8 @@ footer h5{ font-size:.82rem; letter-spacing:1.5px; text-transform:uppercase; col
                   <option>Mini Bus</option>
                 </select>
               </div>
-              <div class="form-group"><label for="bFlight">Flight Number (optional)</label><input type="text" id="bFlight" placeholder="e.g. AA1234"></div>
-              <div class="form-group full"><label for="bRequests">Special Requests</label><textarea id="bRequests" placeholder="Child seat, extra stops, decorations, etc."></textarea></div>
+              <div class="form-group"><label for="bFlight">Flight Number (optional)</label><input type="text" id="bFlight" name="flightNumber" placeholder="e.g. AA1234"></div>
+              <div class="form-group full"><label for="bRequests">Special Requests</label><textarea id="bRequests" name="specialRequests" placeholder="Child seat, extra stops, decorations, etc."></textarea></div>
             </div>
             <div class="form-note">* Required fields. A confirmation will be sent to your email within 30 minutes.</div>
             <button type="submit" class="btn btn-gold btn-block">Submit Reservation Request</button>
@@ -1429,10 +1429,10 @@ footer h5{ font-size:.82rem; letter-spacing:1.5px; text-transform:uppercase; col
             <input type="hidden" name="form-name" value="contact">
             <p style="position:absolute; left:-9999px;"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
             <div class="form-grid">
-              <div class="form-group"><label for="cName">Full Name *</label><input type="text" id="cName" required placeholder="Your name"></div>
-              <div class="form-group"><label for="cEmail">Email *</label><input type="email" id="cEmail" required placeholder="you@example.com"></div>
-              <div class="form-group full"><label for="cPhone">Phone Number *</label><input type="tel" id="cPhone" required placeholder="(615) 555-0100"></div>
-              <div class="form-group full"><label for="cMessage">Message *</label><textarea id="cMessage" required placeholder="How can we help you?"></textarea></div>
+              <div class="form-group"><label for="cName">Full Name *</label><input type="text" id="cName" name="fullName" required placeholder="Your name"></div>
+              <div class="form-group"><label for="cEmail">Email *</label><input type="email" id="cEmail" name="email" required placeholder="you@example.com"></div>
+              <div class="form-group full"><label for="cPhone">Phone Number *</label><input type="tel" id="cPhone" name="phone" required placeholder="(615) 555-0100"></div>
+              <div class="form-group full"><label for="cMessage">Message *</label><textarea id="cMessage" name="message" required placeholder="How can we help you?"></textarea></div>
             </div>
             <button type="submit" class="btn btn-gold btn-block">Send Message</button>
           </form>
