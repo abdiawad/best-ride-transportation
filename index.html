@@ -502,7 +502,7 @@ footer h5{ font-size:.82rem; letter-spacing:1.5px; text-transform:uppercase; col
 }
 @media (max-width:860px){
   nav.main-nav{ display:none; }
-  .header-phone .p-label{ display:none; }
+  .header-phone{ display:none; }
   .header-actions > .btn{ display:none; }
   .hamburger{ display:flex; }
   .stats-grid{ grid-template-columns:repeat(2,1fr); gap:36px; }
@@ -1731,6 +1731,17 @@ function imgFallback(img){
   tryPlay();
   document.addEventListener('visibilitychange', function(){
     if(!document.hidden) tryPlay();
+  });
+  // Some mobile browsers (data saver / battery saver) block autoplay entirely
+  // until the user has interacted with the page at least once.
+  var retryOnInteraction = function(){
+    if(heroVideo.paused) tryPlay();
+    ['touchstart','click','scroll'].forEach(function(evt){
+      document.removeEventListener(evt, retryOnInteraction);
+    });
+  };
+  ['touchstart','click','scroll'].forEach(function(evt){
+    document.addEventListener(evt, retryOnInteraction, { once:true, passive:true });
   });
 })();
 
